@@ -22,7 +22,7 @@ request({
 				let href = $(this).attr('href');
 				//将概要插入数据库
 				let jsonData = {
-					"date":new Date().getTime(),
+					"date":new Date().getTime()+Math.floor(Math.random()*99),
 					"id":tid,
 					"title":title,
 					"href":href
