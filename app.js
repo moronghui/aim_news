@@ -17,12 +17,12 @@ request({
 			var detailTotal = 0;
 			var length = lists.length;
 			lists.each(function(index,el){
-				let tid = (new Date().getTime()+"").slice(-6);
+				let tid = (new Date().getTime()+"").slice(-6)+Math.floor(Math.random()*99);
 				let title = $(this).text();
 				let href = $(this).attr('href');
 				//将概要插入数据库
 				let jsonData = {
-					"date":new Date().getTime()+Math.floor(Math.random()*99),
+					"date":new Date().getTime(),
 					"id":tid,
 					"title":title,
 					"href":href
