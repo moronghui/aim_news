@@ -17,6 +17,9 @@ request({
 			var detailTotal = 0;
 			var length = lists.length;
 			lists.each(function(index,el){
+				if (index > 10) {
+					return ;
+				}
 				let tid = (new Date().getTime()+"").slice(-6)+Math.floor(Math.random()*99);
 				let title = $(this).text();
 				let href = $(this).attr('href');
@@ -82,10 +85,6 @@ request({
 					}
 				});
 				
-			})
-			
-
-
-			
+			})	
 		}
 });
